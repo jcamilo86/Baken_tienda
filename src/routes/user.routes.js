@@ -1,15 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const {getUser,createUser,updateUser,verifyUser,loginUser} = require("../controllers/user.controller");
+const { getUser, createUser, updateUser, verifyUser, loginUser } = require("../controllers/user.controller");
 const auth = require("../middlewares/auth");
 
 
-router.get("/verify", auth,verifyUser);
-
-
+router.get("/verify", auth, verifyUser);
 
 //READ
-router.get("/", getUser);
+router.get("/", auth, getUser);
 
 //CREATE
 router.post("/", createUser);
@@ -17,10 +15,10 @@ router.post("/", createUser);
 router.post("/login", loginUser);
 
 //UPDATE
-router.put("/:id", updateUser);
+router.put("/:id", auth, updateUser);
 
 //DELETE
-//router.delete("/id", deleteUser);
+//router.delete("/id", auth, deleteUser);
 
 module.exports = router;
 

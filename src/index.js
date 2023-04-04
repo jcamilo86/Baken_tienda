@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 const connectDB = require("./database/db")
-require('dotenv').config()    
+require('dotenv').config()
 const cors = require('cors');
 connectDB()
-const userRouter= require("./routes/user.routes")
+const userRouter = require("./routes/user.routes")
 
 
 
@@ -13,10 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 //RUTAS
-app.use("/user",userRouter)
-
-
-
+app.use("/user", userRouter)
 
 //EL SERVIDOR EN ESCUCHA
 app.listen(process.env.PORT, () => {

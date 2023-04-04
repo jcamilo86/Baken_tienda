@@ -50,7 +50,6 @@ const createUser = async (req, res) => {
 			(error, token) => {
 				// CALLBACK QUE, EN CASO DE QUE EXISTA UN ERROR, DEVUELVA EL TOKEN
 				if (error) throw error
-				//res.json(nuevoUsuario)
 				res.json({ token })
 			}
 		)
