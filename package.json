@@ -1,7 +1,6 @@
 {
   "name": "api_trake",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js",
@@ -19,5 +18,15 @@
     "mongoose": "^7.0.3",
     "nodemon": "^2.0.22",
     "uuid": "^9.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcamilo86/Baken_tienda.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcamilo86/Baken_tienda/issues"
+  },
+  "homepage": "https://github.com/jcamilo86/Baken_tienda#readme",
+  "description": ""
 }

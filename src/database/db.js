@@ -7,7 +7,7 @@ const connectDB = async () => {
 	try {
 		// CONEXIÓN A BASE DE DATOS
 		// IMPORTANTE UTILIZAR NUESTRA VARIABLE DE ENTORNO CON PROCESS.ENV
-		await mongoose.connect(process.env.URL_MOGO, {
+		await mongoose.connect(process.env.MONGODB_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		})
