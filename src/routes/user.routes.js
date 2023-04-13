@@ -10,7 +10,7 @@ router.get("/verify", auth, verifyUser);
 router.get("/", auth, getUser);
 
 //CREATE
-router.post("/", createUser);
+router.post("/create", createUser);
 
 router.post("/login", loginUser);
 
