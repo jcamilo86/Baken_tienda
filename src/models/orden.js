@@ -25,6 +25,9 @@ const ordenSchema = mongoose.Schema({
       },
     },
   ],
+},
+{
+timestanps: true,
 });
 
 
