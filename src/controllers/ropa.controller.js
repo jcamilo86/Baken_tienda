@@ -20,7 +20,7 @@ const createRopa = async (req, res) => {
       tipo,
       color,
       sexo,
-      precio,
+      precio
     });
     res.json(nuevaRopa);
   } catch (error) {
@@ -30,4 +30,26 @@ const createRopa = async (req, res) => {
   }
 };
 
-module.exports = { getRopaByTipo, createRopa  };
+const updateRopa = async (req,res)=>{
+  try{
+  const id = req.params.id;
+  const updatedRopa = await Ropa.findByIdAndUpdate(id,{
+    nombre,
+    talla,
+    tipo,
+    color,
+    sexo,
+    precio
+
+  },{new:true})
+  res.json(updatedRopa);
+} catch (error) {
+  res.status(500).json({
+    msg: "Error al actulizar la ropa",
+  });
+}
+  
+}
+
+
+module.exports = { getRopaByTipo, createRopa, updateRopa };

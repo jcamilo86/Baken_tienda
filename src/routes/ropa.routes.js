@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const { getRopaByTipo,createRopa } = require("../controllers/ropa.controller");
+const { getRopaByTipo,createRopa,updateRopa } = require("../controllers/ropa.controller");
 const auth = require("../middlewares/auth");
 
 //read
-router.get("/filtrar", getRopaByTipo );
-router.post("/crear", createRopa )
+router.get("", getRopaByTipo );
+router.post("", createRopa );
+router.put("/:id", updateRopa );
 
 module.exports = router;
