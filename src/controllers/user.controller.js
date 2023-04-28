@@ -15,10 +15,6 @@ const getUser = async (req, res) => {
   }
 };
 
-
-
-
-
 // CREAR UN USUARIO JWT
 const createUser = async (req, res) => {
 	const { username, email, password } = req.body // OBTENER USUARIO, EMAIL Y PASSWORD DE LA PETICIÓN
